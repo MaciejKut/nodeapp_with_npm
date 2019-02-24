@@ -17,7 +17,8 @@ function getOSinfo() {
     console.log('System:'.gray, type);
     console.log('Release:'.red, release);
     console.log('CPU model:'.cyan, cpu);
-    console.log('Uptime: ~'.green, timebeautyfy.time(uptime));
+    process.stdout.write('Uptime: ~'.green);
+    timebeautyfy.time(uptime);
     console.log('User name:'.yellow, userInfo.username);
     console.log('Home dir:', userInfo.homedir);
 }
